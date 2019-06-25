@@ -1,7 +1,9 @@
+# Pong in Python, simple solution for simple game
+
 import turtle       # import biblioteki turle, lepsza niz pygames do takich prostych gierek
 
 
-# Wczytanie konfiguracji z pliku
+# Load config from file
 f = open('conf.txt', 'r')
 conf = f.read()
 f.close()
@@ -9,6 +11,8 @@ x = int(conf.split(';')[1])          # wazne parametry konfiguracyjne to sa kole
 y = int(conf.split(';')[3])
 diff = int(conf.split(';')[5])
 diff = diff / 10
+
+# Main window
 window = turtle.Screen()        #tworzenie glownego okna gry
 window.title("PING PONG")
 window.bgcolor("black")
@@ -56,7 +60,7 @@ score.a = 0                     #wynik gracza 1, a ponizej gracza 2
 score.b = 0
 
 
-# Function
+# Functions
 
 
 def paddle_a_up():              #sa tutaj 4 funkcje do poruszania kolumnami, najpierw 2 dla gracza 1, a pozniej dla gracza 2
